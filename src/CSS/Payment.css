@@ -1,0 +1,25 @@
+.PaymentTitle{
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+}
+.RadioButtonContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+.formContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 300px;
+    align-self: center;
+}
+.EachRadioButton{
+ margin-right: 5px;
+}
+.EachRadioLabel{
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}

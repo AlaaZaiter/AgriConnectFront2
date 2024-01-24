@@ -1,0 +1,13 @@
+.AllProductsContainer {
+    display: flex;
+    gap: 20px; /* Adjust the gap between items */
+    justify-content: center;
+    width: 100%;
+
+  }
+  .subProductsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }

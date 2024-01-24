@@ -1,0 +1,108 @@
+.AllPostsContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    justify-content: center;
+}
+.EachPost{
+    display: flex;
+    flex-direction: row;
+    width: 650px;
+    justify-content: center;
+    align-self: center;   
+    box-shadow: 0 4px 8px ; /* Box shadow */
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    }
+.SubEachPost{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.PostInfo{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+.PostInfoImg{
+    display: flex;
+    flex-direction: row;
+}
+.PostInfoImg div{
+    display: flex;
+    flex-direction: column;
+}
+.EachPostContent {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-top: 12px;
+    word-wrap: break-word; /* Add this line */
+    width: 100%;
+}
+.postImage{
+    width: 25%;
+    display: flex;
+  justify-content: center;
+  align-self: center;
+    margin-right: 8px;
+    border-radius: 10px;
+    height: 200px;
+  }
+.EachPostTitle{
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-right: 5px;
+    margin: 5px;
+    margin-top: 12px;
+    width: 25%;
+}
+.PostOwner{
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.PostDuration{
+    font-size: x-small;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Comments{
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+}
+.CommentsContainer{
+    display: flex;
+    flex-direction: row;
+}
+.CommentImg{
+    width: 20px;
+    height: 15px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+@media screen and (min-width: 360px) and (max-width: 480px) {
+    .EachPost{
+        width: 300px;
+        flex-direction: column;
+    }
+    .postImage{
+        width: 80%;
+    }
+    .PostInfoImg{
+        justify-content: space-between;
+    }
+    .CommentsContainer{
+        margin: 10px;
+    }
+  }
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+  }

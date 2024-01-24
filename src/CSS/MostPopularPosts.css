@@ -1,0 +1,68 @@
+#MostPopularPostsContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: #355E3B;
+    height: 220px;
+}
+.PostsTitle{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+.SubPostsContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: space-between;
+    background-color:#355E3B ;
+}
+.SubPostsContainer div{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    background-color: #355E3B;
+
+}
+.PostsImg{
+width: 80%;
+height: 150px;
+border-radius: 10px;
+}
+.PostTitle{
+color: white;
+font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+}
+.PostText{
+    color: white;
+    margin-top: 10px;
+}
+.discussionNumber{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+}
+@media screen and (min-width: 360px) and (max-width: 480px) {
+    .SubPostsContainer{
+        flex-direction: column;
+    }
+    .SubPostsContainer div{
+        width: 100%;
+    }
+    
+
+  }
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    .PostText{
+        font-size: large;
+    }
+  }

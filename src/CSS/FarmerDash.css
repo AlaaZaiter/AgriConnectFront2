@@ -1,0 +1,242 @@
+
+.Dashboard{
+    display: flex;
+    flex-direction: row;
+    height: 1000px;
+  }
+  .default-dash-title{
+    color: #355E3B;
+  }
+  .side-menu {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    background-color: #355E3B;
+    overflow-x: hidden;
+
+  }
+  .dash-title {
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    align-self: center;
+  }
+  .dash-menu {
+    color: white;
+    list-style: none;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  .dash-menu-item {
+    margin-bottom: 20px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    align-self: flex-start;
+    color: white;
+  }
+  .productimg{
+    width: 100%;
+    height: 100%;
+  }
+  .SuitableIcon{
+    width: 25px;
+    height: 25px;
+  }
+  .dash-menu-item::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid white; /* You can adjust the color and thickness here */
+    margin-top: 5px; /* Adjust the spacing between the li text and the line */
+    width: 100%;
+  }
+  
+  .dash-menu-item:hover {
+    background-color: #90EE90;
+  }
+  .dash-content {
+    width: 100%;
+    padding: 25px;
+  }
+  
+  hr {
+    transform: rotate(180deg);
+  }
+  
+  
+  thead{
+    background-color: #355E3B;
+  }
+  
+  .email-td-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  table,
+  td {
+    border: 1px solid #ddd;
+    color: #355E3B;
+    padding: 10px; 
+    border-collapse: collapse;
+    word-wrap: break-word; /* Break long words and wrap onto next line */
+    white-space: normal;   /* Allow white space to wrap */
+    
+  }
+  table {
+    margin-top: 50px;
+    border-collapse: collapse;
+    width: 790px;
+    height: 100px;
+    text-align: center;
+    table-layout: fixed;
+
+  }
+  th {
+    border: 1px solid #ddd;
+    color: #fff;
+    padding: 10px; 
+    width: 95px;
+    
+  }
+  .YourProductsContainer{
+    width: 200%;
+  }
+  
+  
+  .dash-projects{
+    width:200px;
+    height:500px;
+  }
+  h2 {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  .email-label {
+    color: #355E3B;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .email-name-search {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #355E3B;
+    margin-right: 10px;
+    border-radius: 30px;
+    padding: 10px;
+    color: #355E3B;
+    margin-bottom: 10px;
+    background-color: transparent;
+  }
+  .displayProjects{
+    width: 100%;
+  }
+  .email-name-button {
+    width: 150px;
+    height: 35px;
+    background-color: #355E3B;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  .email-td-data {
+    font-size: 20px;
+  }
+  
+  .email-p {
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .dash-projects {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #131416;
+    border-radius: 25px;
+    margin-top: 15px;
+    padding: 15px;
+    margin-left: 10px;
+
+  }
+  .dash-project-title {
+    font-size: 25px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  .dash-project-image {
+    margin-bottom: 15px;
+  }
+  .dash-project-desc {
+    font-size: 15px;
+   
+  }
+  h3 {
+    color: white;
+  }
+  
+  .add-project-desc {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #355E3B;
+    margin-right: 10px;
+    border-radius: 30px;
+    padding: 10px;
+    color: #355E3B;
+    margin-bottom: 10px;
+    font-size: 15px;
+    resize: none;
+    background-color: transparent;
+    }
+    .email-search {
+      display: flex;
+      flex-direction: column;
+    }
+    .project-container {
+      width: 100%;
+      text-align: left;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 0px;
+    }
+    .product-search{
+      background-color: #355E3B;
+      display: flex;
+      flex-direction: column;
+      align-items: center;  
+      border-radius: 10px;
+      }
+    .product-name-search{
+      width: 50%;
+      margin: 10px;
+      height: 30px;
+      border-radius: 5px;
+    }
+    .product-name-button{
+      background-color: white ;
+      color: #355E3B;
+      border-radius: 10px;
+      width: 200px;
+      margin: 10px;
+      height: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: large;
+    }
+   .editInput {
+    border: none;
+    width: 100%;
+    text-align: center;
+    
+  }
