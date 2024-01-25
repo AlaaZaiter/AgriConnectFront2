@@ -73,7 +73,7 @@
             </div>
             <div class=" overlay-panel overlay-right" v-else>
               <h1 class='h1login'>Hello, Friend!</h1>
-              <p class='plogin'>Enter your info and start your coding journey!</p>
+              <p class='plogin'>Enter your info and start your farming journey!</p>
               <button class="ghost Sign" id="signUp" @click="handleSignUpClick">
                 Sign Up
               </button>
@@ -168,5 +168,13 @@
   </script>
   
   <style scoped>
-  /* Add your styles here */
-  </style>
+/* ... (your existing styles) */
+
+@media screen and (max-width: 480px) {
+  .LoginContainer {
+    display: flex;
+    flex-direction: row; 
+  }
+
+}
+</style>
