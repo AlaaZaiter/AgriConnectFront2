@@ -8,6 +8,8 @@
         <li class="dash-menu-item" @click="handleClick('products')">Products</li>
         <li class="dash-menu-item" @click="handleClick('orders')">orders</li>
         <li class="dash-menu-item" @click="handleClick('posts')">Posts</li>
+        <li class="dash-menu-item" @click="handleLogout">Log out</li>
+        
       </ul>
     </div>
     <hr />
@@ -56,6 +58,13 @@ export default {
 
   },
   methods: {
+    handleLogout() {
+      sessionStorage.removeItem("authToken");
+      this.userId = null; // Set userId to null to indicate logout
+      this.$router.push('/');
+
+      // You can add any additional logout cleanup here
+    },
     handleClick(section) {
       switch (section) {
         case 'posts':
