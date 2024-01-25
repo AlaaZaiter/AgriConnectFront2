@@ -62,7 +62,7 @@ export default {
         // Make a request to your backend API with the token and additional data
         const response = await axios.post(`${process.env.VUE_APP_BASE_URL}/payment/pay`, {
           OrderID,
-          amount: this.amount, // Use the amount from the data model
+          amount: this.$route.params.Amount, // Use the amount from the data model
           PaymentStatus,
           PaymentMethod,
           stripeToken: token.id,

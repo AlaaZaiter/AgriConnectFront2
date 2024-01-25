@@ -76,6 +76,8 @@ export default {
         localStorage.setItem(`cart-${this.userId}`, JSON.stringify([]));
         this.cartItems = [];
         alert("Your order has been placed!");
+        this.$router.push('/orders');
+
         this.closeModal();
       } catch (error) {
         console.error("Error during checkout:", error);

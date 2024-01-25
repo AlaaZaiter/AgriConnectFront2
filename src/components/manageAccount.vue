@@ -38,7 +38,7 @@ export default {
       isEditMode: false,
       userId: null,
       userData: {
-        userImage: "",
+        userImage: null,
         fullName: "",
         phoneNumber: "",
       },
@@ -58,7 +58,7 @@ export default {
 
           // Set user data
           this.userData = {
-            userImage: response.data.data.image || "",
+            userImage: response.data.data.image || null,
             fullName: response.data.data.FullName || "",
             phoneNumber: response.data.data.phoneNumber || "",
           };
@@ -77,7 +77,7 @@ export default {
       formData.append("phoneNumber", this.userData.phoneNumber);
 
       // Make an API request to update the user data
-      await axios.post(updateApi, formData);
+      await axios.put(updateApi, formData);
 
       console.log("User Id:", this.userId);
       console.log("Updated:", formData);

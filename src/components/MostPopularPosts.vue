@@ -60,7 +60,10 @@ export default {
       } catch (error) {
         console.error('Error fetching most popular posts:', error);
       }
-    }, 
+    },  goToProducts() {
+      // Use router.push to navigate to the Products component
+      this.$router.push('/posts');
+    },
     async translateTexts(message) {
   const langCode = this.$i18n.locale;
   console.log(`Translating to: ${langCode}`);
