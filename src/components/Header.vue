@@ -216,5 +216,11 @@ this.$i18n.locale = lang;
   .modalContent{
   width: 40%;
 }
+.LoginButton{
+  width: 40px;
+  font-size: smaller;
+  margin-left: 3px;
+
+}
   }
 </style>

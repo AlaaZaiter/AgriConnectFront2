@@ -18,6 +18,8 @@
         <p class="discussionNumber">{{ post.DiscussionCount }} discussions</p>
       </div>
     </div>
+    <button class="ProductsButton" @click="goToProducts">View All Posts</button>
+
   </div>
 </template>
 

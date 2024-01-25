@@ -30,61 +30,72 @@
   </template>
   
   <script>
-  import axios from 'axios';
-  
-  export default {
-    data() {
-      return {
-        isEditMode: false,
-        userData: {
-          userImage: "",
-          fullName: "",
-          phoneNumber: "",
-        },
-      };
-    },
-    async created() {
-      await this.getUserData(this.$route.params.userId);
-    },
-    methods: {
-      async getUserData(userId) {
-        console.log("here is user id" + userId);
-        if (userId != null) {
-          const api = `${process.env.VUE_APP_BASE_URL}/user/getByID/${userId}`;
-          try {
-            const response = await axios.get(api);
-  
-            // Set user data
-            this.userData = {
-              userImage: response.data.data.image || "",
-              fullName: response.data.data.FullName || "",
-              phoneNumber: response.data.data.phoneNumber || "",
-            };
-          } catch (error) {
-            console.log(error);
-          }
-        }
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      isEditMode: false,
+      userId: null,
+      userData: {
+        userImage: "",
+        fullName: "",
+        phoneNumber: "",
       },
-      toggleEditMode() {
-        if (this.isEditMode) {
-          // Save logic can be added here
-          // For demonstration purposes, we'll just log the values along with userId
-          console.log("User Id:", this.userId);
-          console.log("Saved:", this.userData);
+    };
+  },
+  async created() {
+    await this.getUserData(this.$route.params.userId);
+  },
+  methods: {
+    async getUserData(userId) {
+      console.log("here is user id" + userId);
+      this.userId = userId; // Store the userId for later use
+      if (userId != null) {
+        const api = `${process.env.VUE_APP_BASE_URL}/user/getByID/${userId}`;
+        try {
+          const response = await axios.get(api);
+
+          // Set user data
+          this.userData = {
+            userImage: response.data.data.image || "",
+            fullName: response.data.data.FullName || "",
+            phoneNumber: response.data.data.phoneNumber || "",
+          };
+        } catch (error) {
+          console.log(error);
         }
-        this.isEditMode = !this.isEditMode;
-      },
-      handleImageUpload(event) {
-        const file = event.target.files[0];
-        if (file) {
-          // Handle the file upload logic here (you can use FormData and make an API request)
-          // For now, we'll just update the userImage data
-          this.userData.userImage = URL.createObjectURL(file);
-        }
-      },
+      }
     },
-  };
-  </script>
+    async toggleEditMode() {
+  if (this.isEditMode) {
+    try {
+      const updateApi = `${process.env.VUE_APP_BASE_URL}/user/updateWithImg/${this.$route.params.userId}`;
+      const formData = new FormData();
+      formData.append("image", this.userData.userImage);
+      formData.append("FullName", this.userData.fullName);
+      formData.append("phoneNumber", this.userData.phoneNumber);
+
+      // Make an API request to update the user data
+      await axios.post(updateApi, formData);
+
+      console.log("User Id:", this.userId);
+      console.log("Updated:", formData);
+    } catch (error) {
+      console.log(error);
+      // Handle error appropriately
+    }
+  }
+  this.isEditMode = !this.isEditMode;
+},
+
+    handleImageUpload(event) {
+      this.userData.userImage = event.target.files[0];
+
+    },
+  },
+};
+</script>
   
   <style scoped>
   /* Add any scoped styles here if needed */

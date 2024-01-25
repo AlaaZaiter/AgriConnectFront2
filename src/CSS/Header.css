@@ -92,8 +92,8 @@ justify-content: center;
   }
   @media screen and (min-width: 360px) and (max-width: 480px) {
     li{
-        margin: 2px;
-        font-size:12px;
+        margin: 5px;
+        font-size:10px;
     }
     .logoImg{
         margin: 2px;
@@ -120,6 +120,15 @@ justify-content: center;
         flex-direction: column;
         align-items: center;
     }
+    .HeroText{
+        margin-top:200px;
+        color: #013220;
+        font-weight: bold;
+        font-size: medium;
+    }
+    .HeroTitle{
+        margin-top: 100px;
+      }
     
   }
   @media screen and (min-width: 481px) and (max-width: 1024px) {
@@ -145,4 +154,5 @@ justify-content: center;
         height: 40px;
         font-size: large;
       }
+      
   }

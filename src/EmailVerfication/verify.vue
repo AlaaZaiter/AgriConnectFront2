@@ -27,8 +27,9 @@ export default {
       console.log("here is the user token "+userToken)
       if (userToken) {
           sessionStorage.setItem("authToken", userToken);
+          setTimeout(() => {
           this.$router.push('/');
-
+        }, 3000);
         } else {
           console.error('Token not found in response');
         }
