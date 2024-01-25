@@ -7,7 +7,7 @@
    <p class="FooterPs">Get 10% off your first order</p>
    <div class="inputContainer">
    <input type ="text" placeholder="Enter Your Email"/>
-   <img src="../images/th.jpg" class="sendIcon"/>
+   <img src="../images/th.png" class="sendIcon"/>
   </div>
    </div>
    <div>
