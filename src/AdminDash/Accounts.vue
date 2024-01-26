@@ -135,10 +135,14 @@ export default {
     },
     async saveEdit(user) {
       this.showLoading()
+      const token = sessionStorage.getItem("authToken");
+    const headers = { Authorization: `Bearer ${token}` };
       try {
         const response = await axios.put(`${process.env.VUE_APP_BASE_URL}/user/update/${user.id}`, {
           role: user.editedRole,
           // Include other fields you want to update
+        },{
+          headers,
         });
         console.log('User updated successfully:', response.data);
         this.showToast('User updated successfully','success')
