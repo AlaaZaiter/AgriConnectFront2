@@ -11,7 +11,7 @@
   <!-- Render image tag if the file is not a video -->
   <img v-else :src="post.File" alt="post" class="postImage"  @click="openFileModal(post.File)">
         <div class="SubEachPost">
-          <p class="EachPostTitle">post.Title</p>
+          <p class="EachPostTitle">post</p>
           <p class="EachPostContent">{{ post.Content }}</p>
           <div class="PostInfo">
             <div class="PostInfoImg">
